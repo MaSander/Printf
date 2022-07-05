@@ -1,5 +1,7 @@
 {
     "files.associations": {
-        "converters.h": "c"
+        "converters.h": "c",
+        "type_traits": "c",
+        "cstdlib": "c"
     }
 }
