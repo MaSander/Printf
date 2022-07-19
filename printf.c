@@ -6,33 +6,34 @@
 /*   By: msander- <msander-@student.42sp.org.br     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/29 23:37:44 by msander-          #+#    #+#             */
-/*   Updated: 2022/07/04 23:42:02 by msander-         ###   ########.fr       */
+/*   Updated: 2022/07/18 22:35:57 by msander-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "printf.h"
-# include <stdio.h>
 
-int convert(char type, va_list lst)
+int	convert(char type, va_list lst)
 {
 	if (type == 'c')
-		return char_writer(va_arg(lst, int));
+		return (char_writer(va_arg(lst, int)));
 	if (type == 's')
-		return string_writer(va_arg(lst, char *));
+		return (string_writer(va_arg(lst, char *)));
 	if (type == 'p')
-		return pointer_writer((int)va_arg(lst, void *));
-	// if (type == 'i' || type == 'd')
-	// 	return printf("%c", va_arg(lst, char *));
-	// if (type == 'u')
-	// 	return printf("%c", va_arg(lst, char *));
-	// if (type == 'X' || type == 'x')
-	// 	return printf("%c", va_arg(lst, char *));
+		return (pointer_writer(va_arg(lst, void *)));
+	if (type == 'i' || type == 'd')
+		return (number_writer(va_arg(lst, int)));
+	if (type == 'u')
+		return (unumber_writer(va_arg(lst, int)));
+	if (type == 'x')
+	 	return (hexadecimal_writer((long)va_arg(lst, char *), 0));
+	if (type == 'X')
+	 	return (hexadecimal_writer((long)va_arg(lst, char *), 1));		
 	if (type == '%')
-		return char_writer('%');
+		return (char_writer('%'));
 	return (0);
 }
 
-int ft_printf(const char *string, ...)
+int	ft_printf(const char *string, ...)
 {
 	int		i;
 	va_list	ap;
