@@ -6,7 +6,7 @@
 /*   By: msander- <msander-@student.42sp.org.br     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/06 21:27:00 by msander-          #+#    #+#             */
-/*   Updated: 2022/07/19 23:55:48 by msander-         ###   ########.fr       */
+/*   Updated: 2022/07/20 19:58:43 by msander-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@ int	number_writer(int number)
 	if (str)
 		writelen = string_writer(str);
 	free(str);
+	str = 0;
 	return (writelen);
 }
 
@@ -35,5 +36,6 @@ int	unsigned_num_writer(unsigned int number)
 	if (str)
 		writelen = string_writer(str);
 	free(str);
+	str = 0;
 	return (writelen);
 }

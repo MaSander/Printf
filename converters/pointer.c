@@ -6,7 +6,7 @@
 /*   By: msander- <msander-@student.42sp.org.br     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/06 21:23:51 by msander-          #+#    #+#             */
-/*   Updated: 2022/07/19 20:42:01 by msander-         ###   ########.fr       */
+/*   Updated: 2022/07/20 19:24:08 by msander-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,12 @@ int	pointer_writer(void *p)
 	int	count;
 
 	count = 0;
+	if (!p)
+		return (string_writer("(nil)"));
 	if (p)
 	{
-		count = string_writer("0x7");
-		count = hexadecimal_writer((long)&p, 0);
+		count += string_writer("0x");
+		count += hexadecimal_writer((long)p, 0);
 	}
 	return (count);
 }

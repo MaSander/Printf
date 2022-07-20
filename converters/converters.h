@@ -6,7 +6,7 @@
 /*   By: msander- <msander-@student.42sp.org.br     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/30 00:16:53 by msander-          #+#    #+#             */
-/*   Updated: 2022/07/20 00:37:54 by msander-         ###   ########.fr       */
+/*   Updated: 2022/07/20 19:50:42 by msander-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ int		string_writer(char *str);
 int		pointer_writer(void *p);
 int		number_writer(int number);
 int		unsigned_num_writer(unsigned int number);
-int		hexadecimal_writer(long long num, int isupercase);
+int		hexadecimal_writer(unsigned long num, int isupercase);
 void	*ft_calloc(size_t num, size_t size);
 
 #endif
