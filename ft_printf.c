@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   printf.c                                           :+:      :+:    :+:   */
+/*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: msander- <msander-@student.42sp.org.br     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/29 23:37:44 by msander-          #+#    #+#             */
-/*   Updated: 2022/07/19 20:36:04 by msander-         ###   ########.fr       */
+/*   Updated: 2022/07/19 23:56:00 by msander-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "printf.h"
+#include "ft_printf.h"
 
 int	convert(char type, va_list lst)
 {
@@ -23,7 +23,7 @@ int	convert(char type, va_list lst)
 	if (type == 'i' || type == 'd')
 		return (number_writer(va_arg(lst, int)));
 	if (type == 'u')
-		return (unumber_writer(va_arg(lst, int)));
+		return (unsigned_num_writer(va_arg(lst, int)));
 	if (type == 'x')
 		return (hexadecimal_writer((long)va_arg(lst, char *), 0));
 	if (type == 'X')

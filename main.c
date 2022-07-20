@@ -1,4 +1,4 @@
-#include "printf.h"
+#include "ft_printf.h"
 #include "converters/converters.h"
 #include "stdio.h"
 
@@ -9,16 +9,23 @@ void jump()
 
 int main(void)
 {
-    int positive = -42;
+    int number = -42;
 
     jump();
 
-    ft_printf("|%x|", &positive);
-    ft_printf("|%X|", &positive);
-    ft_printf("|%p|", &positive);
-    ft_printf("|%d|", &positive);
-    ft_printf("|%d|", positive);
-    ft_printf("|%u|", positive);
+    printf("%d - ", ft_printf("|%x|", &number));
+    jump();
+    printf("%d - ", ft_printf("|%X|", &number));
+    jump();
+    printf("%d - ", ft_printf("|%p|", &number));
+    jump();
+    printf("%d - ", ft_printf("|%d|", &number));
+    jump();
+    printf("%d - ", ft_printf("|%d|", number));
+    jump();
+    printf("%d - ", ft_printf("|%u|", number));
+    jump();
+    printf("%d - ", printf("|%u|", number));
 
     jump();
     jump();

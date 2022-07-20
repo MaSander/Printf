@@ -6,7 +6,7 @@
 /*   By: msander- <msander-@student.42sp.org.br     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/06 21:27:00 by msander-          #+#    #+#             */
-/*   Updated: 2022/07/06 22:25:08 by msander-         ###   ########.fr       */
+/*   Updated: 2022/07/19 23:55:48 by msander-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,24 +25,15 @@ int	number_writer(int number)
 	return (writelen);
 }
 
-int	unumber_writer(int number)
+int	unsigned_num_writer(unsigned int number)
 {
 	char	*str;
-	int		i;
 	int		writelen;
 
-	i = 0;
 	writelen = 0;
-	str = ft_itoa(number);
+	str = ft_itoa((unsigned int)number);
 	if (str)
-	{
-		while (str[i])
-		{
-			if (str[i] >= '0' || str[i] <= '9')
-				writelen += char_writer(str[i]);
-			i++;
-		}		
-	}
+		writelen = string_writer(str);
 	free(str);
 	return (writelen);
 }

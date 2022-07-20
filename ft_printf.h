@@ -6,12 +6,12 @@
 /*   By: msander- <msander-@student.42sp.org.br     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/30 00:26:18 by msander-          #+#    #+#             */
-/*   Updated: 2022/07/19 20:37:03 by msander-         ###   ########.fr       */
+/*   Updated: 2022/07/19 22:52:15 by msander-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PRINTF_H
-# define PRINTF_H
+#ifndef FT_PRINTF_H
+# define FT_PRINTF_H
 # include "./converters/converters.h"
 
 int	ft_printf(const char *string, ...);

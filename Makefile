@@ -1,6 +1,6 @@
 NAME	= libftprintf.a
 
-SRCS	= printf.c ./converters/char.c ./converters/hexadecimal.c ./converters/numbers.c ./converters/pointer.c ./converters/string.c ./converters/utils.c
+SRCS	= ft_printf.c ./converters/char.c ./converters/hexadecimal.c ./converters/numbers.c ./converters/pointer.c ./converters/string.c ./converters/utils.c
 
 FOLDERS	= converters
 
@@ -19,6 +19,12 @@ ${NAME}:	${OBJS}
 
 ${OBJS}:	%.o: %.c
 	${CC} ${CFLAGS} -o $@ -c $<
+
+out:	${OBJS}
+	gcc -g ${OBJS} main.c
+
+val:
+	valgrind --leak-check=full --show-leak-kinds=all --log-file=log ./a.out
 
 clean:
 	${RM} ${OBJS}
