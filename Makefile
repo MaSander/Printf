@@ -21,7 +21,7 @@ ${OBJS}:	%.o: %.c
 	${CC} ${CFLAGS} -o $@ -c $<
 
 out:	${OBJS}
-	gcc -g ${OBJS} main.c
+	gcc -g ${OBJS} main.c ft_printf.h ./converters/converters.h
 
 val:
 	valgrind --leak-check=full --show-leak-kinds=all --log-file=log ./a.out
@@ -33,3 +33,9 @@ fclean:		clean
 	${RM} ${NAME} libftprintf.a
 
 re:	fclean all
+
+allclean: fclean
+	${RM} log ./a.out converters/converters.h.gch ft_printf.h.gch && clear
+
+norm:
+	norminette ${SRCS} ft_printf.h ./converters/converters.h

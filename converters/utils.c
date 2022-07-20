@@ -6,7 +6,7 @@
 /*   By: msander- <msander-@student.42sp.org.br     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/06 21:23:38 by msander-          #+#    #+#             */
-/*   Updated: 2022/07/19 23:57:24 by msander-         ###   ########.fr       */
+/*   Updated: 2022/07/20 00:14:53 by msander-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,8 @@ size_t	ft_strlen(const char *c)
 	size_t	lengh;
 
 	lengh = 0;
-	if(!c)
-		return 0;
+	if (!c)
+		return (0);
 	while (*c)
 	{
 		lengh++;

@@ -13,19 +13,9 @@ int main(void)
 
     jump();
 
-    printf("%d - ", ft_printf("|%x|", &number));
+    printf("|- %d", printf(" %x ", 0));
     jump();
-    printf("%d - ", ft_printf("|%X|", &number));
-    jump();
-    printf("%d - ", ft_printf("|%p|", &number));
-    jump();
-    printf("%d - ", ft_printf("|%d|", &number));
-    jump();
-    printf("%d - ", ft_printf("|%d|", number));
-    jump();
-    printf("%d - ", ft_printf("|%u|", number));
-    jump();
-    printf("%d - ", printf("|%u|", number));
+    printf("|- %d", ft_printf(" %x ", 0));
 
     jump();
     jump();
