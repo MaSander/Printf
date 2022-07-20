@@ -9,27 +9,19 @@ void jump()
 
 int main(void)
 {
-    // int positive = 42;
+    int positive = -42;
 
     jump();
 
-    // printf("number: %i", 
-    // printf("|%x|", &positive));
+    ft_printf("|%x|", &positive);
+    ft_printf("|%X|", &positive);
+    ft_printf("|%p|", &positive);
+    ft_printf("|%d|", &positive);
+    ft_printf("|%d|", positive);
+    ft_printf("|%u|", positive);
 
-    // char *result = hexadecimal(&positive, 0);
-
-    // printf("|%p\n", &positive);
-    // printf("|%ld\n", &positive);
-    // printf("|%x\n", &positive);
-    // printf("|%s\n", result);
-
-    // jump();
-
-    // printf("number: %i",
-    // ft_printf("|%p|", positive));
-
-    // jump();
-    // jump();
+    jump();
+    jump();
 
     return (1);
 }

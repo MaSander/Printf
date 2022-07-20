@@ -6,7 +6,7 @@
 /*   By: msander- <msander-@student.42sp.org.br     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/29 23:37:44 by msander-          #+#    #+#             */
-/*   Updated: 2022/07/18 22:35:57 by msander-         ###   ########.fr       */
+/*   Updated: 2022/07/19 20:36:04 by msander-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,9 +25,9 @@ int	convert(char type, va_list lst)
 	if (type == 'u')
 		return (unumber_writer(va_arg(lst, int)));
 	if (type == 'x')
-	 	return (hexadecimal_writer((long)va_arg(lst, char *), 0));
+		return (hexadecimal_writer((long)va_arg(lst, char *), 0));
 	if (type == 'X')
-	 	return (hexadecimal_writer((long)va_arg(lst, char *), 1));		
+		return (hexadecimal_writer((long)va_arg(lst, char *), 1));
 	if (type == '%')
 		return (char_writer('%'));
 	return (0);
