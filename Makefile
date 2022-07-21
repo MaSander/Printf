@@ -25,7 +25,8 @@ out:	${OBJS}
 #	gcc -g ft_printf.c ft_printf.h converters/*.c converters/converters.h main.c
 
 val:
-	valgrind --leak-check=full --show-leak-kinds=all --log-file=log ./a.out
+	valgrind --leak-check=full --show-leak-kinds=all ./a.out
+# valgrind --leak-check=full --show-leak-kinds=all --log-file=log ./a.out
 
 clean:
 	${RM} ${OBJS}

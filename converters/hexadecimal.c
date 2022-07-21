@@ -6,7 +6,7 @@
 /*   By: msander- <msander-@student.42sp.org.br     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/18 19:39:57 by msander-          #+#    #+#             */
-/*   Updated: 2022/07/20 19:58:27 by msander-         ###   ########.fr       */
+/*   Updated: 2022/07/20 20:18:17 by msander-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,30 @@ static char	*add_char_front(char *str, char c)
 	return (result);
 }
 
-int	hexadecimal_writer(unsigned long num, int isupercase)
+int	hexadecimal_writer(unsigned int num, int isupercase)
+{
+	int				count;
+	char			*hexa;
+	unsigned long	rest;
+	unsigned long	result;
+
+	hexa = ft_calloc(1, 1);
+	result = num;
+	while (result >= 16)
+	{
+		result = result / 16;
+		rest = num - (result * 16);
+		num = result;
+		hexa = add_char_front(hexa, char_hexadecimal(rest, isupercase));
+	}
+	hexa = add_char_front(hexa, char_hexadecimal(result, isupercase));
+	count = string_writer(hexa);
+	free(hexa);
+	hexa = 0;
+	return (count);
+}
+
+int	hexadecimal_long_writer(unsigned long num, int isupercase)
 {
 	int				count;
 	char			*hexa;
